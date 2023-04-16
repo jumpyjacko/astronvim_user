@@ -21,6 +21,10 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
+    -- Buffer Navigation
+    ["<Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
+    ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
+
     -- My Beloved vim-colemak Bindings
     -- Movement Keys
     ["h"] = { "h", desc = "Move left" },
@@ -66,9 +70,6 @@ return {
     ["<C-W>n"] = { "<C-W>j" },
     ["<C-W>e"] = { "<C-W>k" },
     ["<C-W>i"] = { "<C-W>l" },
-  },
-  i = {
-    ["NE"] = { "<Esc>", desc = "Quick Escape bindings" },
   },
   v = {
     -- Movement Keys
