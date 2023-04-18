@@ -21,6 +21,9 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
+    -- Open Aerial Symbol Tree
+    ["<leader>s"] = { "<cmd>AerialToggle<cr>", desc = "Toggle Aerial" },
+
     -- Buffer Navigation
     ["<Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
