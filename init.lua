@@ -52,6 +52,17 @@ return {
     servers = {
       -- "pyright"
     },
+    ["rust-analyzer"] = {
+      checkOnSave = {
+        command = "clippy"
+      },
+      diagnostics = {
+        enable = true,
+        experimental = {
+          enable = true,
+        },
+      },
+    },
   },
 
   -- Configure require("lazy").setup() options
