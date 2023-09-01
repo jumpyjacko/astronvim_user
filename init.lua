@@ -123,5 +123,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_create_autocmd('BufEnter', {
+      pattern = {'*.md', '*.tex'},
+      group = group,
+      command = 'setlocal wrap'
+    })
   end,
 }

@@ -31,8 +31,8 @@ return {
     -- My Beloved vim-colemak Bindings
     -- Movement Keys
     ["h"] = { "h", desc = "Move left" },
-    ["n"] = { "j", desc = "Move down" },
-    ["e"] = { "k", desc = "Move up" },
+    ["n"] = { "gj", desc = "Move down" },
+    ["e"] = { "gk", desc = "Move up" },
     ["i"] = { "l", desc = "Move right" },
     -- Words forward/backward
     ["l"] = { "b", desc = "Move to start of word" },
