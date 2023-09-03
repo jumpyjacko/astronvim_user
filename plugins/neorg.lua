@@ -6,7 +6,7 @@ return {
       ["core.dirman"] = {
         config = {
           workspaces = {
-            everything = "~/notes/everything",
+            notes = "~/notes",
           },
         },
       },
