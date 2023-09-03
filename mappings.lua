@@ -21,9 +21,6 @@ return {
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
-    -- Open Aerial Symbol Tree
-    ["<leader>s"] = { "<cmd>AerialToggle<cr>", desc = "Toggle Aerial" },
-
     -- Buffer Navigation
     ["<Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
@@ -41,6 +38,13 @@ return {
     ["U"] = { "E", desc = "Move to end of word" },
     ["y"] = { "w", desc = "Move to end of word" },
     ["Y"] = { "W", desc = "Move to end of word" },
+    -- More motions
+    ["p"] = { "t", desc = "Move up to char" },
+    ["P"] = { "T", desc = "Move up to char (Reversed)" },
+    ["b"] = { ";", desc = "Repeat latest f or p"},
+    ["B"] = { ",", desc = "Repeat latest f or p (Reversed)" },
+    ["k"] = { "n", desc = "Repeat latest / or ?" },
+    ["K"] = { "N", desc = "Repeat latest / or ? (Reversed)" },
 
     -- Mode Keys
     ["s"] =     { "i",     desc = "Insert mode" },
@@ -91,6 +95,29 @@ return {
     ["z"] =  { "u",     desc = "Undo" },
     ["gz"] = { "U",     desc = "Undo (?)" },
     ["Z"] =  { "<C-R>", desc = "Redo" },
+  },
+  o = {
+    ["r"] = { "i", desc = "Selecting inner" },
+    
+    -- Movement Keys
+    ["h"] = { "h", desc = "Move left" },
+    ["n"] = { "gj", desc = "Move down" },
+    ["e"] = { "gk", desc = "Move up" },
+    ["i"] = { "l", desc = "Move right" },
+    -- Words forward/backward
+    ["l"] = { "b", desc = "Move to start of word" },
+    ["L"] = { "B", desc = "Move to start of word" },
+    ["u"] = { "e", desc = "Move to end of word" },
+    ["U"] = { "E", desc = "Move to end of word" },
+    ["y"] = { "w", desc = "Move to end of word" },
+    ["Y"] = { "W", desc = "Move to end of word" },
+    -- More motions
+    ["p"] = { "t", desc = "Move up to char" },
+    ["P"] = { "T", desc = "Move up to char (Reversed)" },
+    ["b"] = { ";", desc = "Repeat latest f or p"},
+    ["B"] = { ",", desc = "Repeat latest f or p (Reversed)" },
+    ["k"] = { "n", desc = "Repeat latest / or ?" },
+    ["K"] = { "N", desc = "Repeat latest / or ? (Reversed)" },
   },
   t = {
     -- setting a mapping to false will disable it
