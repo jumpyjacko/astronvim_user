@@ -46,6 +46,9 @@ return {
     ["k"] = { "n", desc = "Repeat latest / or ?" },
     ["K"] = { "N", desc = "Repeat latest / or ? (Reversed)" },
 
+    ["<C-d>"] = { "<C-d>zz", desc = "Page Up"},
+    ["<C-u>"] = { "<C-u>zz", desc = "Page Down"},
+    
     -- Mode Keys
     ["s"] =     { "i",     desc = "Insert mode" },
     ["S"] =     { "I",     desc = "Insert mode (Start of line)" },
