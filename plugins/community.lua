@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.editing-support.nvim-regexplainer"},
   { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.media.presence-nvim"},
+  { import = "astrocommunity.note-taking.neorg"},
 }

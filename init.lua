@@ -124,9 +124,9 @@ return {
     --   },
     -- }
     vim.api.nvim_create_autocmd('BufEnter', {
-      pattern = {'*.md', '*.tex'},
+      pattern = {'*.md', '*.tex', '*.norg'},
       group = group,
-      command = 'setlocal wrap'
+      command = 'setlocal wrap | setlocal spell spelllang=en_au'
     })
   end,
 }
