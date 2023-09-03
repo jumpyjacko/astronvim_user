@@ -22,15 +22,15 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     -- Buffer Navigation
-    ["<Tab>"] = { "<cmd>bnext<cr>", desc = "Next Buffer" },
+    ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
 
     -- My Beloved vim-colemak Bindings
     -- Movement Keys
-    ["h"] = { "h", desc = "Move left" },
-    ["n"] = { "gj", desc = "Move down" },
-    ["e"] = { "gk", desc = "Move up" },
-    ["i"] = { "l", desc = "Move right" },
+    ["h"] = { "h",  desc = "Move left" },
+    ["n"] = { "v:count == 0 ? 'gj' : 'j'", desc = "Move down", expr = true, silent = true },
+    ["e"] = { "v:count == 0 ? 'gk' : 'k'", desc = "Move up", expr = true, silent = true },
+    ["i"] = { "l",  desc = "Move right" },
     -- Words forward/backward
     ["l"] = { "b", desc = "Move to start of word" },
     ["L"] = { "B", desc = "Move to start of word" },
@@ -39,40 +39,39 @@ return {
     ["y"] = { "w", desc = "Move to end of word" },
     ["Y"] = { "W", desc = "Move to end of word" },
     -- More motions
-    ["p"] = { "t", desc = "Move up to char" },
-    ["P"] = { "T", desc = "Move up to char (Reversed)" },
-    ["b"] = { ";", desc = "Repeat latest f or p"},
-    ["B"] = { ",", desc = "Repeat latest f or p (Reversed)" },
-    ["k"] = { "n", desc = "Repeat latest / or ?" },
-    ["K"] = { "N", desc = "Repeat latest / or ? (Reversed)" },
-
-    ["<C-d>"] = { "<C-d>zz", desc = "Page Up"},
-    ["<C-u>"] = { "<C-u>zz", desc = "Page Down"},
+    ["p"]     = { "t",       desc = "Move up to char" },
+    ["P"]     = { "T",       desc = "Move up to char (Reversed)" },
+    ["b"]     = { ";",       desc = "Repeat latest f or p"},
+    ["B"]     = { ",",       desc = "Repeat latest f or p (Reversed)" },
+    ["k"]     = { "nzz",     desc = "Repeat latest / or ?", expr = false},
+    ["K"]     = { "Nzz",     desc = "Repeat latest / or ? (Reversed)" },
+    ["<C-n>"] = { "<C-d>zz", desc = "Page Down"},
+    ["<C-e>"] = { "<C-u>zz", desc = "Page Up"},
     
     -- Mode Keys
-    ["s"] =     { "i",     desc = "Insert mode" },
-    ["S"] =     { "I",     desc = "Insert mode (Start of line)" },
-    ["t"] =     { "a",     desc = "Append mode" },
-    ["T"] =     { "A",     desc = "Append mode (End of line)" },
-    ["a"] =     { "v",     desc = "Visual mode" },
-    ["A"] =     { "V",     desc = "Visual line mode" },
+    ["s"]     = { "i",     desc = "Insert mode" },
+    ["S"]     = { "I",     desc = "Insert mode (Start of line)" },
+    ["t"]     = { "a",     desc = "Append mode" },
+    ["T"]     = { "A",     desc = "Append mode (End of line)" },
+    ["a"]     = { "v",     desc = "Visual mode" },
+    ["A"]     = { "V",     desc = "Visual line mode" },
     ["<C-a>"] = { "<C-v>", desc = "Visual block mode" },
-    ["ga"] =    { "gv",    desc = "Visual mode (?)" },
+    ["ga"]    = { "gv",    desc = "Visual mode (?)" },
 
     -- Cut/Copy/Paste and Undo/Redo
-    ["x"] =  { "x",     desc = "Cut" },
-    ["c"] =  { "y",     desc = "Copy" },
-    ["v"] =  { "p",     desc = "Paste" },
-    ["X"] =  { "dd",    desc = "Cut line"},
-    ["C"] =  { "yy",    desc = "Copy line"},
-    ["V"] =  { "P",     desc = "Paste on current line"},
-    ["z"] =  { "u",     desc = "Undo" },
+    ["x"]  = { "x",     desc = "Cut" },
+    ["c"]  = { "y",     desc = "Copy" },
+    ["v"]  = { "p",     desc = "Paste" },
+    ["X"]  = { "dd",    desc = "Cut line"},
+    ["C"]  = { "yy",    desc = "Copy line"},
+    ["V"]  = { "P",     desc = "Paste on current line"},
+    ["z"]  = { "u",     desc = "Undo" },
     ["gz"] = { "U",     desc = "Undo (?)" },
-    ["Z"] =  { "<C-R>", desc = "Redo" },
+    ["Z"]  = { "<C-R>", desc = "Redo" },
 
     -- Change (?)
-    ["w"] = { "c" },
-    ["W"] = { "C" },
+    ["w"]  = { "c" },
+    ["W"]  = { "C" },
     ["ww"] = { "cc" },
 
     -- Window Management
@@ -84,28 +83,8 @@ return {
   v = {
     -- Movement Keys
     ["h"] = { "h", desc = "Move left" },
-    ["n"] = { "j", desc = "Move down" },
-    ["e"] = { "k", desc = "Move up" },
-    ["i"] = { "l", desc = "Move right" },
-    
-    -- Cut/Copy/Paste and Undo/Redo
-    ["x"] =  { "x",     desc = "Cut" },
-    ["c"] =  { "y",     desc = "Copy" },
-    ["v"] =  { "p",     desc = "Paste" },
-    ["X"] =  { "dd",    desc = "Cut line"},
-    ["C"] =  { "yy",    desc = "Copy line"},
-    ["V"] =  { "P",     desc = "Paste on current line"},
-    ["z"] =  { "u",     desc = "Undo" },
-    ["gz"] = { "U",     desc = "Undo (?)" },
-    ["Z"] =  { "<C-R>", desc = "Redo" },
-  },
-  o = {
-    ["r"] = { "i", desc = "Selecting inner" },
-    
-    -- Movement Keys
-    ["h"] = { "h", desc = "Move left" },
-    ["n"] = { "gj", desc = "Move down" },
-    ["e"] = { "gk", desc = "Move up" },
+    ["n"] = { "v:count == 0 ? 'gj' : 'j'", desc = "Move down", expr = true, silent = true },
+    ["e"] = { "v:count == 0 ? 'gk' : 'k'", desc = "Move up", expr = true, silent = true },
     ["i"] = { "l", desc = "Move right" },
     -- Words forward/backward
     ["l"] = { "b", desc = "Move to start of word" },
@@ -115,12 +94,46 @@ return {
     ["y"] = { "w", desc = "Move to end of word" },
     ["Y"] = { "W", desc = "Move to end of word" },
     -- More motions
-    ["p"] = { "t", desc = "Move up to char" },
-    ["P"] = { "T", desc = "Move up to char (Reversed)" },
-    ["b"] = { ";", desc = "Repeat latest f or p"},
-    ["B"] = { ",", desc = "Repeat latest f or p (Reversed)" },
-    ["k"] = { "n", desc = "Repeat latest / or ?" },
-    ["K"] = { "N", desc = "Repeat latest / or ? (Reversed)" },
+    ["p"] = { "t",   desc = "Move up to char" },
+    ["P"] = { "T",   desc = "Move up to char (Reversed)" },
+    ["b"] = { ";",   desc = "Repeat latest f or p"},
+    ["B"] = { ",",   desc = "Repeat latest f or p (Reversed)" },
+    ["k"] = { "nzz", desc = "Repeat latest / or ?", expr = false },
+    ["K"] = { "Nzz", desc = "Repeat latest / or ? (Reversed)" },
+    
+    -- Cut/Copy/Paste and Undo/Redo
+    ["x"]  = { "x",     desc = "Cut" },
+    ["c"]  = { "y",     desc = "Copy" },
+    ["v"]  = { "p",     desc = "Paste" },
+    ["X"]  = { "dd",    desc = "Cut line"},
+    ["C"]  = { "yy",    desc = "Copy line"},
+    ["V"]  = { "P",     desc = "Paste on current line"},
+    ["z"]  = { "u",     desc = "Undo" },
+    ["gz"] = { "U",     desc = "Undo (?)" },
+    ["Z"]  = { "<C-R>", desc = "Redo" },
+  },
+  o = {
+    ["r"] = { "i", desc = "Selecting inner" },
+    
+    -- Movement Keys
+    ["h"] = { "h",  desc = "Move left" },
+    ["n"] = { "v:count == 0 ? 'gj' : 'j'", desc = "Move down", expr = true, silent = true },
+    ["e"] = { "v:count == 0 ? 'gk' : 'k'", desc = "Move up", expr = true, silent = true },
+    ["i"] = { "l",  desc = "Move right" },
+    -- Words forward/backward
+    ["l"] = { "b", desc = "Move to start of word" },
+    ["L"] = { "B", desc = "Move to start of word" },
+    ["u"] = { "e", desc = "Move to end of word" },
+    ["U"] = { "E", desc = "Move to end of word" },
+    ["y"] = { "w", desc = "Move to end of word" },
+    ["Y"] = { "W", desc = "Move to end of word" },
+    -- More motions
+    ["p"] = { "t",   desc = "Move up to char" },
+    ["P"] = { "T",   desc = "Move up to char (Reversed)" },
+    ["b"] = { ";",   desc = "Repeat latest f or p"},
+    ["B"] = { ",",   desc = "Repeat latest f or p (Reversed)" },
+    ["k"] = { "nzz", desc = "Repeat latest / or ?", expr = false },
+    ["K"] = { "Nzz", desc = "Repeat latest / or ? (Reversed)" },
   },
   t = {
     -- setting a mapping to false will disable it
