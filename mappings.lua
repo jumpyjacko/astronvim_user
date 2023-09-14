@@ -23,6 +23,9 @@ return {
 
     -- Bind for Neorg
     [","] = { "<LocalLeader>", desc = "Local Leader" },
+    ["<leader>N"] = { name = "Neorg" },
+    ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
+    ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
     
     -- Buffer Navigation
     ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },

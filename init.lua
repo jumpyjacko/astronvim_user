@@ -126,7 +126,11 @@ return {
     vim.api.nvim_create_autocmd('BufEnter', {
       pattern = {'*.md', '*.tex', '*.norg'},
       group = group,
-      command = 'setlocal wrap | setlocal spell spelllang=en_au'
+      command = 'setlocal wrap | setlocal spell'
+    })
+    vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
+      pattern = {'*.norg'},
+      command = 'set conceallevel=3'
     })
   end,
 }
