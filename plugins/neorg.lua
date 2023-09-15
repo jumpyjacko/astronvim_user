@@ -10,7 +10,6 @@ return {
       ["core.qol.toc"] = {},
       ["core.qol.todo_items"] = {},
       ["core.integrations.telescope"] = {},
-      ["external.kanban"] = {},
       ["core.completion"] = {
         config = {
           engine = "nvim-cmp",
@@ -31,6 +30,11 @@ return {
           },
           neorg_leader = "<Leader><Leader>"
         },
+      },
+      ["external.templates"] = {
+        config = {
+          templates_dir = "~/.config/nvim/lua/user/norg_templates"
+        }
       },
     },
   },
