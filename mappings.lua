@@ -22,10 +22,15 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     -- Bind for Neorg
-    [","] = { "<LocalLeader>", desc = "Local Leader" },
     ["<leader>N"] = { name = "Neorg" },
     ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
+    ["<leader>Nt"] = { name = "Templates" },
+    ["<leader>Ntm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
+    ["<leader>Nk"] = { name = "Kanban" },
+    ["<leader>Nko"] = { "<cmd>Neorg kanban open<cr>", desc = "Open Kanban" },
+    ["<leader>Nkc"] = { "<cmd>Neorg kanban close<cr>", desc = "Close Kanban" },
+    ["<leader>Nkt"] = { "<cmd>Neorg kanban toggle<cr>", desc = "Toggle Kanban" },
     
     -- Buffer Navigation
     ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },

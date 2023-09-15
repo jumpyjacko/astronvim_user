@@ -7,7 +7,10 @@ return {
       ["core.concealer"] = {},
       ["core.export"] = {},
       ["core.journal"] = {},
+      ["core.qol.toc"] = {},
+      ["core.qol.todo_items"] = {},
       ["core.integrations.telescope"] = {},
+      ["external.kanban"] = {},
       ["core.completion"] = {
         config = {
           engine = "nvim-cmp",
@@ -26,9 +29,15 @@ return {
           workspaces = {
             notes = "~/notes",
           },
+          neorg_leader = "<Leader><Leader>"
         },
       },
     },
   },
-  dependencies = { "nvim-lua/plenary.nvim", "nvim-neorg/neorg-telescope" },
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-neorg/neorg-telescope",
+    "pysan3/neorg-templates",
+    "L3MON4D3/LuaSnip"
+  },
 }
