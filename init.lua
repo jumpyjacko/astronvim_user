@@ -123,6 +123,7 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_set_hl(0, 'LineNr', { fg = '#b4befe' })
     vim.api.nvim_create_autocmd('BufEnter', {
       pattern = {'*.md', '*.tex', '*.norg'},
       group = group,

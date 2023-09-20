@@ -147,6 +147,10 @@ return {
     ["k"] = { "nzz", desc = "Repeat latest / or ?", expr = false },
     ["K"] = { "Nzz", desc = "Repeat latest / or ? (Reversed)" },
   },
+  i = {
+    ["<C-BS>"] = { "<C-o>db", desc = "Delete Word"},
+    ["<C-Del>"] = { "<C-o>dw", desc = "Delete Word (Forward)"},
+  },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
