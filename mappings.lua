@@ -27,6 +27,7 @@ return {
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
     ["<leader>Nt"] = { name = "Templates" },
     ["<leader>Ntm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
+    ["<leader>Ntf"] = { "<cmd>Neorg templates fload fleeting<cr>", desc = "Fleeting"},
     ["<leader>Nk"] = { name = "Kanban" },
     ["<leader>Nko"] = { "<cmd>Neorg kanban open<cr>", desc = "Open Kanban" },
     ["<leader>Nkc"] = { "<cmd>Neorg kanban close<cr>", desc = "Close Kanban" },
