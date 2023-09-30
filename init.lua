@@ -54,7 +54,10 @@ return {
     },
     ["rust-analyzer"] = {
       checkOnSave = {
-        command = "clippy"
+        command = "clippy",
+      },
+      cachePriming = {
+        enable = true,
       },
       diagnostics = {
         enable = true,
@@ -133,8 +136,8 @@ return {
       pattern = {'*.norg'},
       command = 'set conceallevel=3'
     })
-    if vim.fn.empty(vim.env.DISPLAY) == 1 then
-      vim.cmd('colorscheme default')
-    end
+    -- if vim.fn.empty(vim.env.DISPLAY) == 1 then
+    --   vim.cmd('colorscheme default')
+    -- end
   end,
 }
