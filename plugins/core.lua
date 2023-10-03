@@ -17,6 +17,14 @@ return {
         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀⠀⠀⠀⠀",
         "      Peace was never an option.     ",
       }
+      local button = require("astronvim.utils").alpha_button
+      opts.section.buttons.val = {
+        button("LDR n",   "  New File  "),
+        button("LDR f f", "  Find File  "),
+        button("LDR f o", "󰈙  Recents  "),
+        button("LDR S l", "  Last Session  "),
+        button("LDR N i", "󰎚  Neorg Notes  "),
+      }
       return opts
     end,
   },

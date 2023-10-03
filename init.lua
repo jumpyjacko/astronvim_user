@@ -54,16 +54,16 @@ return {
     },
     ["rust-analyzer"] = {
       checkOnSave = {
-        command = "clippy",
-      },
-      cachePriming = {
-        enable = true,
+        command = "clippy"
       },
       diagnostics = {
         enable = true,
         experimental = {
           enable = true,
         },
+      },
+      cachePriming = {
+        enable = true,
       },
     },
   },
@@ -130,14 +130,14 @@ return {
     vim.api.nvim_create_autocmd('BufEnter', {
       pattern = {'*.md', '*.tex', '*.norg'},
       group = group,
-      command = 'setlocal wrap | setlocal spell'
+      command = 'setlocal wrap | setlocal spell | setlocal colorcolumn=110'
     })
     vim.api.nvim_create_autocmd({'BufEnter', 'BufWinEnter'}, {
       pattern = {'*.norg'},
       command = 'set conceallevel=3'
     })
-    -- if vim.fn.empty(vim.env.DISPLAY) == 1 then
-    --   vim.cmd('colorscheme default')
-    -- end
+    if vim.fn.empty(vim.env.DISPLAY) == 1 then
+      vim.cmd('colorscheme default')
+    end
   end,
 }
