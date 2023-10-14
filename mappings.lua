@@ -20,8 +20,11 @@ return {
     ["<leader>b"] = { name = "Buffers" },
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    -- Buffer Navigation
+    ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },
+    ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
 
-    -- Bind for Neorg
+    -- Binds for Neorg
     ["<leader>N"] = { name = "󰎚 Neorg" },
     ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
@@ -35,10 +38,6 @@ return {
     ["<leader>Nkc"] = { "<cmd>Neorg kanban close<cr>", desc = "Close Kanban" },
     ["<leader>Nkt"] = { "<cmd>Neorg kanban toggle<cr>", desc = "Toggle Kanban" },
     
-    -- Buffer Navigation
-    ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },
-    ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
-
     -- My Beloved vim-colemak Bindings
     -- Movement Keys
     ["h"] = { "h",  desc = "Move left" },
