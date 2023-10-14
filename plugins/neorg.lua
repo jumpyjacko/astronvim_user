@@ -22,7 +22,28 @@ return {
         config = {
           default_keybinds = true,
           hook = function (keybinds)
-            keybinds.map("norg", "n", "gm", "<cmd>Neorg inject-metadata<CR>")
+            keybinds.unmap("norg", "n", "gtd")
+            keybinds.map_event("norg", "n", "gtd", "core.norg.qol.todo_items.todo.task_done", { desc = "Task Done" })
+
+            keybinds.unmap("norg", "n", "gtu")
+            keybinds.map_event("norg", "n", "gtu", "core.norg.qol.todo_items.todo.task_undone", { desc = "Task Undone" })
+
+            keybinds.unmap("norg", "n", "gtp")
+            keybinds.map_event("norg", "n", "gtp", "core.norg.qol.todo_items.todo.task_pending", { desc = "Task Pending" })
+
+            keybinds.unmap("norg", "n", "gth")
+            keybinds.map_event("norg", "n", "gth", "core.norg.qol.todo_items.todo.task_on_hold", { desc = "Task On Hold" })
+
+            keybinds.unmap("norg", "n", "gtc")
+            keybinds.map_event("norg", "n", "gtc", "core.norg.qol.todo_items.todo.task_cancelled", { desc = "Task Cancelled" })
+
+            keybinds.unmap("norg", "n", "gtr")
+            keybinds.map_event("norg", "n", "gtr", "core.norg.qol.todo_items.todo.task_recurring", { desc = "Task Recurring" })
+
+            keybinds.unmap("norg", "n", "gti")
+            keybinds.map_event("norg", "n", "gti", "core.norg.qol.todo_items.todo.task_important", { desc = "Task Important" })
+            
+            keybinds.map_event("norg", "n", "gm", "<cmd>Neorg inject-metadata<cr>", { desc = "Add Metadata" })
           end,
         },
       },
