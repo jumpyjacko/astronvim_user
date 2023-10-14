@@ -13,6 +13,7 @@ return {
       ["core.qol.toc"] = {},
       ["core.qol.todo_items"] = {},
       ["core.integrations.telescope"] = {},
+      -- ["core.ui.calendar"] = {},
       ["core.completion"] = {
         config = {
           engine = "nvim-cmp",
@@ -22,6 +23,7 @@ return {
         config = {
           default_keybinds = true,
           hook = function (keybinds)
+            -- Core Plugin Keybinds
             keybinds.unmap("norg", "n", "gtd")
             keybinds.map_event("norg", "n", "gtd", "core.norg.qol.todo_items.todo.task_done", { desc = "Task Done" })
 
@@ -55,6 +57,7 @@ return {
           neorg_leader = "<Leader><Leader>"
         },
       },
+      ["external.exec"] = {},
       ["external.templates"] = {
         config = {
           templates_dir = "~/.config/nvim/lua/user/norg_templates"
@@ -66,6 +69,7 @@ return {
     "nvim-lua/plenary.nvim",
     "nvim-neorg/neorg-telescope",
     "pysan3/neorg-templates",
-    "L3MON4D3/LuaSnip"
+    "L3MON4D3/LuaSnip",
+    "laher/neorg-exec",
   },
 }

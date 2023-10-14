@@ -28,15 +28,16 @@ return {
     ["<leader>N"] = { name = "󰎚 Neorg" },
     ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
-    ["<leader>Nt"] = { name = "Templates" },
-    ["<leader>Nte"] = { "<cmd>e $XDG_CONFIG_HOME/nvim/lua/user/norg_templates/templates.norg<cr><cmd>set autochdir <cr>", desc = "Edit Neorg Templates"},
-    ["<leader>Ntm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
-    ["<leader>Ntf"] = { "<cmd>Neorg templates fload fleeting<cr>", desc = "Fleeting"},
-    ["<leader>Ntp"] = { "<cmd>Neorg templates fload project<cr>", desc = "Projects"},
+    ["<leader>NT"] = { name = "Templates" },
+    ["<leader>NTe"] = { "<cmd>e $XDG_CONFIG_HOME/nvim/lua/user/norg_templates/templates.norg<cr><cmd>set autochdir <cr>", desc = "Edit Neorg Templates"},
+    ["<leader>NTm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
+    ["<leader>NTf"] = { "<cmd>Neorg templates fload fleeting<cr>", desc = "Fleeting"},
+    ["<leader>NTp"] = { "<cmd>Neorg templates fload project<cr>", desc = "Projects"},
     ["<leader>Nk"] = { name = "Kanban" },
     ["<leader>Nko"] = { "<cmd>Neorg kanban open<cr>", desc = "Open Kanban" },
     ["<leader>Nkc"] = { "<cmd>Neorg kanban close<cr>", desc = "Close Kanban" },
     ["<leader>Nkt"] = { "<cmd>Neorg kanban toggle<cr>", desc = "Toggle Kanban" },
+    ["<leader>Nr"] = { "<cmd>Neorg exec cursor<cr>", desc = "Run Code Block" },
     
     -- My Beloved vim-colemak Bindings
     -- Movement Keys
