@@ -22,12 +22,14 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 
     -- Bind for Neorg
-    ["<leader>N"] = { name = "Neorg" },
+    ["<leader>N"] = { name = "󰎚 Neorg" },
     ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
     ["<leader>Nt"] = { name = "Templates" },
+    ["<leader>Nte"] = { "<cmd>e $XDG_CONFIG_HOME/nvim/lua/user/norg_templates/templates.norg<cr><cmd>set autochdir <cr>", desc = "Edit Neorg Templates"},
     ["<leader>Ntm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
     ["<leader>Ntf"] = { "<cmd>Neorg templates fload fleeting<cr>", desc = "Fleeting"},
+    ["<leader>Ntp"] = { "<cmd>Neorg templates fload project<cr>", desc = "Projects"},
     ["<leader>Nk"] = { name = "Kanban" },
     ["<leader>Nko"] = { "<cmd>Neorg kanban open<cr>", desc = "Open Kanban" },
     ["<leader>Nkc"] = { "<cmd>Neorg kanban close<cr>", desc = "Close Kanban" },

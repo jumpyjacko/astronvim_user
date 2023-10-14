@@ -1,6 +1,9 @@
 return {
   "nvim-neorg/neorg",
   after = "nvim-treesitter/nvim-treesitter",
+  build = ":Neorg sync-parsers",
+  dependencies = { "nvim-lua/plenary.nvim" },
+  event = "VeryLazy",
   opts = {
     load = {
       ["core.defaults"] = {},

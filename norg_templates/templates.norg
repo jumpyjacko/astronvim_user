@@ -1,0 +1,15 @@
+@document.meta
+title: templates
+description: 
+authors: jackson
+categories: 
+created: 2023-10-14T11:10:43+1000
+updated: 2023-10-14T11:12:46+1000
+version: 1.1.1
+@end
+
+* Templates
+  This is where my templates are, do what you want
+  - [main]{:./main:}
+  - [fleeting]{:./fleeting:}
+  - [project]{:./project:}

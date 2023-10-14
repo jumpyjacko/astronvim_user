@@ -21,6 +21,7 @@ return {
       opts.section.buttons.val = {
         button("LDR n",   "  New File  "),
         button("LDR f f", "  Find File  "),
+        button("LDR f a", "󰣖  Find Configs"),
         button("LDR f o", "󰈙  Recents  "),
         button("LDR S l", "  Last Session  "),
         button("LDR N i", "󰎚  Neorg Notes  "),
