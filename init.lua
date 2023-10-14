@@ -139,5 +139,14 @@ return {
     if vim.fn.empty(vim.env.DISPLAY) == 1 then
       vim.cmd('colorscheme default')
     end
+    vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+      callback = function(event)
+        if event.match:match("^%w%w+://") then
+          return
+        end
+        local file = vim.loop.fs_realpath(event.match) or event.match
+        vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
+      end,
+    })
   end,
 }
