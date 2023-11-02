@@ -13,7 +13,7 @@ return {
       ["core.qol.toc"] = {},
       ["core.qol.todo_items"] = {},
       ["core.integrations.telescope"] = {},
-      -- ["core.ui.calendar"] = {},
+      ["core.ui.calendar"] = {},
       ["core.completion"] = {
         config = {
           engine = "nvim-cmp",
@@ -44,8 +44,6 @@ return {
 
             keybinds.unmap("norg", "n", "gti")
             keybinds.map_event("norg", "n", "gti", "core.norg.qol.todo_items.todo.task_important", { desc = "Task Important" })
-            
-            keybinds.map_event("norg", "n", "gm", "<cmd>Neorg inject-metadata<cr>", { desc = "Add Metadata" })
           end,
         },
       },

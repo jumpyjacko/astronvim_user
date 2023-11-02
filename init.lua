@@ -31,9 +31,12 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true, -- enable or disable format on save globally
+        enabled = false, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          -- "go",
+          "rust",
+          "javascript",
+          "html",
+          "css",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -147,6 +150,13 @@ return {
         local file = vim.loop.fs_realpath(event.match) or event.match
         vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
       end,
+    })
+
+    -- Some LuaSnip configuration
+    require("luasnip.loaders.from_lua").load({ paths = {"~/.config/nvim/lua/user/snippets" } })
+    require("luasnip").config.set_config({
+      enable_autosnippets = true,
+      store_selection_keys = "<Tab>",
     })
   end,
 }

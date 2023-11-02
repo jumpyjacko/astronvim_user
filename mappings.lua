@@ -28,6 +28,7 @@ return {
     ["<leader>N"] = { name = "󰎚 Neorg" },
     ["<leader>Ni"] = { "<cmd>Neorg workspace notes <cr><cmd>set autochdir <cr>", desc = "Open Notes"},
     ["<leader>Nc"] = { "<cmd>Neorg toggle-concealer <cr>", desc = "Toggle Concealer" },
+    ["<leader>Nm"] = { "<cmd>Neorg inject-metadata<cr>", desc = "Add Document Metadata"},
     ["<leader>NT"] = { name = "Templates" },
     ["<leader>NTe"] = { "<cmd>e $XDG_CONFIG_HOME/nvim/lua/user/norg_templates/templates.norg<cr><cmd>set autochdir <cr>", desc = "Edit Neorg Templates"},
     ["<leader>NTm"] = { "<cmd>Neorg templates fload main<cr>", desc = "Main"},
