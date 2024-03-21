@@ -5,7 +5,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = {
-      ensure_installed = { "bashls", "clangd", "cssls", "dockerls", "html", "jsonls", "tsserver", "marksman", "ruff_lsp", "rust_analyzer" },
+      ensure_installed = { "bashls", "clangd", "cssls", "dockerls", "html", "jsonls", "tsserver", "marksman", "ruff_lsp", "rust_analyzer", "zls" },
     },
   },
   -- use mason-null-ls to configure Formatters/Linter installation for null-ls sources

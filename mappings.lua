@@ -18,8 +18,9 @@ return {
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
+
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { "", desc = "Save File" },  -- change description but the same command
     -- Buffer Navigation
     ["<Tab>"]   = { "<cmd>bnext<cr>", desc = "Next Buffer" },
     ["<S-Tab>"] = { "<cmd>bprev<cr>", desc = "Previous Buffer" },
