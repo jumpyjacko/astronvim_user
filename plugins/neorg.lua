@@ -1,5 +1,6 @@
 return {
   "nvim-neorg/neorg",
+  version = "^7",
   after = "nvim-treesitter/nvim-treesitter",
   build = ":Neorg sync-parsers",
   dependencies = { "nvim-lua/plenary.nvim" },
@@ -13,8 +14,6 @@ return {
       ["core.qol.toc"] = {},
       ["core.qol.todo_items"] = {},
       ["core.integrations.telescope"] = {},
-      -- ["core.integrations.image"] = {},
-      -- ["core.latex.renderer"] = {},
       ["core.ui.calendar"] = {},
       ["core.completion"] = {
         config = {
