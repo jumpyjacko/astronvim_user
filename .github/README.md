@@ -3,6 +3,8 @@ My own (fairly default) configuration of AstroNvim which implements Colemak opti
 
 Other things I did was auto-install language servers for languages I'm often working in and use the [NvChad Telescope Theme snippet](https://astronvim.com/Recipes/telescope_theme) from the [AstroNvim Wiki](https://astronvim.com)
 
+### I don't use these anymore, I use [these configs instead](https://github.com/jumpyjacko/nvim)
+
 ## Gallery
 ### Editor
 ![Dashboard](./gallery/Dashboard.png)
